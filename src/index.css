@@ -1,0 +1,329 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* ─── Neumorphic Brand Palette ─── */
+    --bg-main: #11151C;
+    --surface-main: #171D26;
+    --surface-secondary: #1C232D;
+    --surface-inset: #0E1217;
+    
+    /* Accents */
+    --accent-primary: #2F80ED;
+    --accent-secondary: #38BDF8;
+    
+    /* Text */
+    --text-primary: #F4F7FB;
+    --text-secondary: #AAB4C3;
+    --text-muted: #64748B;
+    
+    /* Borders */
+    --border-subtle: rgba(255, 255, 255, 0.04);
+    --border-accent: rgba(47, 128, 237, 0.4);
+    
+    /* Dual-Shadow Neumorphic System */
+    --neu-raised: -5px -5px 14px rgba(255, 255, 255, 0.025), 6px 6px 16px rgba(0, 0, 0, 0.55);
+    --neu-raised-hover: -7px -7px 18px rgba(255, 255, 255, 0.04), 9px 9px 22px rgba(0, 0, 0, 0.65);
+    --neu-raised-sm: -3px -3px 8px rgba(255, 255, 255, 0.025), 3px 3px 9px rgba(0, 0, 0, 0.45);
+    --neu-raised-sm-hover: -4px -4px 10px rgba(255, 255, 255, 0.04), 5px 5px 12px rgba(0, 0, 0, 0.55);
+    --neu-pressed: inset 3px 3px 7px rgba(0, 0, 0, 0.65), inset -3px -3px 7px rgba(255, 255, 255, 0.02);
+    --neu-input: inset 2px 2px 6px rgba(0, 0, 0, 0.7), inset -2px -2px 6px rgba(255, 255, 255, 0.025);
+    --neu-input-focus: inset 3px 3px 8px rgba(0, 0, 0, 0.8), inset -2px -2px 6px rgba(255, 255, 255, 0.03);
+    
+    /* Typography */
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-secondary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+  }
+}
+
+.header-logo {
+  animation: header-logo-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.preloader-logo {
+  animation: preloader-logo-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@keyframes header-logo-in {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes preloader-logo-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Neumorphic Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0E1217;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C232D;
+  border-radius: 4px;
+  box-shadow: var(--neu-raised-sm);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2F80ED;
+}
+
+/* ─── Neumorphic Surfaces & Cards ─── */
+.neu-surface {
+  background-color: var(--surface-main);
+  box-shadow: var(--neu-raised);
+  border: 1px solid var(--border-subtle);
+}
+
+.neu-surface-secondary {
+  background-color: var(--surface-secondary);
+  box-shadow: var(--neu-raised);
+  border: 1px solid var(--border-subtle);
+}
+
+.neu-card, .solid-card {
+  background-color: var(--surface-main);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--neu-raised);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-card:hover, .solid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--neu-raised-hover);
+  border-color: rgba(47, 128, 237, 0.3);
+}
+
+.neu-card:active, .solid-card:active {
+  transform: translateY(0);
+  box-shadow: var(--neu-pressed);
+}
+
+/* Compact Raised Pill / Surface */
+.neu-pill {
+  background-color: var(--surface-main);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--neu-raised-sm);
+  transition: all 0.3s ease;
+}
+
+.neu-pill:hover {
+  box-shadow: var(--neu-raised-sm-hover);
+  border-color: rgba(47, 128, 237, 0.3);
+}
+
+/* Pressed / Inset Surface */
+.neu-pressed {
+  background-color: var(--surface-inset);
+  box-shadow: var(--neu-pressed);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Neumorphic Input Fields ─── */
+.neu-input {
+  background-color: var(--surface-inset);
+  box-shadow: var(--neu-input);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  transition: all 0.25s ease;
+}
+
+.neu-input::placeholder {
+  color: var(--text-muted);
+}
+
+.neu-input:focus {
+  outline: none;
+  box-shadow: var(--neu-input-focus);
+  border-color: var(--accent-primary);
+}
+
+/* ─── Neumorphic Button: Fill from Bottom Effect ─── */
+.btn-primary, .btn-neu-primary {
+  position: relative;
+  background-color: var(--surface-main);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--neu-raised-sm);
+  color: var(--text-primary);
+  font-weight: 700;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.btn-primary::before, .btn-neu-primary::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0%;
+  background: linear-gradient(to top, #2F80ED, #38BDF8);
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.btn-primary:hover::before, .btn-neu-primary:hover::before {
+  height: 100%;
+}
+
+.btn-primary:hover, .btn-neu-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-raised-hover);
+  color: #FFFFFF;
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.btn-primary:active, .btn-neu-primary:active {
+  transform: translateY(1px);
+  box-shadow: var(--neu-pressed);
+}
+
+/* ─── Neumorphic Secondary Button ─── */
+.btn-secondary, .btn-neu-secondary {
+  position: relative;
+  background-color: var(--surface-main);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--neu-raised-sm);
+  color: var(--text-primary);
+  font-weight: 600;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.btn-secondary::before, .btn-neu-secondary::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0%;
+  background: rgba(47, 128, 237, 0.12);
+  transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.btn-secondary:hover::before, .btn-neu-secondary:hover::before {
+  height: 100%;
+}
+
+.btn-secondary:hover, .btn-neu-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-raised-hover);
+  border-color: var(--accent-primary);
+  color: var(--accent-secondary);
+}
+
+.btn-secondary:active, .btn-neu-secondary:active {
+  transform: translateY(1px);
+  box-shadow: var(--neu-pressed);
+}
+
+/* ─── Dropdown Hover Bridge ─── */
+.dropdown-bridge::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
+}
+
+/* ─── Smooth Reveal Helpers ─── */
+.gsap-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
+
+.gsap-reveal-card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  will-change: transform, opacity;
+}
+
+/* ─── Subtle Accent Line ─── */
+.section-accent-line {
+  position: relative;
+}
+.section-accent-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #2F80ED, transparent);
+}
+
+/* ─── Link Hover Underline ─── */
+.link-hover-underline {
+  position: relative;
+}
+.link-hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2F80ED;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-hover-underline:hover::after {
+  width: 100%;
+}
+
+/* ─── Subtle Agency Grid (Subtle physical texture) ─── */
+.bg-agency-grid {
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .gsap-reveal, .gsap-reveal-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

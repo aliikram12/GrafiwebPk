@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Neumorphic Drop Shadows -->
+    <filter id="neu-surface" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="-2" dy="-2" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.06"/>
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <!-- Subtle linear gradient for monogram -->
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2F80ED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Neumorphic Base Surface -->
+  <rect x="6" y="6" width="52" height="52" rx="16" fill="#171D26" filter="url(#neu-surface)"/>
+  
+  <!-- Subtle Inset Highlight Border -->
+  <rect x="6.5" y="6.5" width="51" height="51" rx="15.5" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Stylized "GW" Monogram -->
+  <!-- Letter G -->
+  <path d="M28 22 C21 22, 17 26, 17 32 C17 38, 21 42, 28 42 C33 42, 36 39, 36 35 L27 35 L27 31 L40 31 C40 41, 35 46, 27 46 C18 46, 12 40, 12 32 C12 24, 18 18, 28 18 C33 18, 37 20, 39 23 L36 26 C34 23, 31 22, 28 22 Z" fill="#F4F7FB"/>
+
+  <!-- Letter W / Pk Accent Mark -->
+  <path d="M37 26 L41 39 L45 28 L49 39 L53 26 L56 26 L51 42 L47 42 L43 31 L39 42 L35 42 L31 26 Z" fill="url(#accent-grad)"/>
+
+  <!-- Small Active Accent Dot -->
+  <circle cx="49" cy="20" r="2.5" fill="#38BDF8"/>
+</svg>
