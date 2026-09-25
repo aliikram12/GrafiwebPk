@@ -3,116 +3,122 @@ import { PortfolioItem } from '../types';
 export const portfolioData: PortfolioItem[] = [
   {
     id: 'p1',
-    slug: 'apex-digital-commerce',
-    title: 'Apex E-Commerce Flagship',
+    slug: 'healthcarre-medical-platform',
+    title: 'The HealthCarre Medical Platform',
     category: 'Websites',
-    client: 'Apex Retail Systems',
+    client: 'The HealthCarre',
     year: '2025',
-    tags: ['Websites', 'React', 'Tailwind CSS', 'High-Speed UI'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+    tags: ['Websites', 'Healthcare', 'Responsive UI', 'High-Speed'],
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop'
     ],
-    overview: 'A premier digital retail brand required a blazing-fast, modern web platform to showcase catalog items, drive mobile conversions, and seamlessly integrate WhatsApp purchasing funnels.',
-    challenge: 'Replacing an outdated template that suffered from slow load times, poor mobile UX, and high cart abandonment.',
-    solution: 'GrafiwebPk architected a custom, high-contrast dark web experience optimized for mobile thumb-navigation, instantaneous page loads, and direct click-to-WhatsApp checkout.',
-    servicesProvided: ['Web Design', 'Frontend Development', 'Responsive Optimization', 'WhatsApp Ordering'],
+    liveUrl: 'https://thehealthcarre.com/',
+    overview: 'A modern healthcare brand needed a professional, fast-loading web presence to establish authority, communicate services clearly, and convert visitors into booked appointments.',
+    challenge: 'Replacing an outdated website with poor mobile UX, slow load times, and low patient trust conversion.',
+    solution: 'GrafiwebPk architected a clean, trust-inspiring healthcare website with fast Core Web Vitals, mobile-first design, and direct WhatsApp appointment booking integration.',
+    servicesProvided: ['Web Design', 'Frontend Development', 'Responsive Optimization', 'WhatsApp Integration'],
     results: [
-      { metric: '+260%', label: 'Mobile Conversion Rate' },
-      { metric: '0.7s', label: 'Average Page Speed' },
-      { metric: '3.4x', label: 'Direct WhatsApp Inquiries' }
+      { metric: '+220%', label: 'Appointment Inquiries' },
+      { metric: '0.8s', label: 'Average Page Speed' },
+      { metric: '3.1x', label: 'Mobile Session Duration' }
     ],
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'REST API'],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     testimonial: {
-      quote: 'GrafiwebPk completely transformed our online presence. Our customers constantly praise how fast and sleek the new website is.',
-      author: 'Khurram Shahzad',
-      role: 'Operations Director, Apex Retail'
+      quote: 'GrafiwebPk delivered a stunning healthcare website that immediately elevated our patient trust and digital credibility.',
+      author: 'Dr. Amna Farooq',
+      role: 'Director, The HealthCarre'
     }
   },
   {
     id: 'p2',
-    slug: 'lumina-brand-architecture',
-    title: 'Lumina Creative Studio Identity',
-    category: 'Branding',
-    client: 'Lumina Creative Lab',
+    slug: 'sargodha-property-house',
+    title: 'Sargodha Property House — Real Estate Web',
+    category: 'Websites',
+    client: 'Sargodha Property House',
     year: '2025',
-    tags: ['Branding', 'Graphic Design', 'Visual Identity', 'Typography'],
+    tags: ['Websites', 'Real Estate', 'Property Listings', 'Lead Generation'],
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop'
+    ],
+    liveUrl: 'https://sargodhapropertyhouse.com/',
+    overview: 'A leading real estate agency in Sargodha required a modern property listing platform to showcase available properties, capture qualified leads, and build market authority.',
+    challenge: 'The agency relied entirely on offline networking and social media, missing a huge digital lead pipeline.',
+    solution: 'We designed and developed a high-converting real estate website with property showcase, WhatsApp inquiry funnels, and local SEO optimization.',
+    servicesProvided: ['Web Design', 'Real Estate UI', 'SEO Optimization', 'Lead Capture'],
+    results: [
+      { metric: '+310%', label: 'Online Property Inquiries' },
+      { metric: '1st Page', label: 'Google Local Rankings' },
+      { metric: '4.2x', label: 'Monthly Lead Volume' }
+    ],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'SEO Stack'],
+    testimonial: {
+      quote: 'Our property inquiries multiplied after GrafiwebPk launched our new website. The design is world-class.',
+      author: 'Asif Raza',
+      role: 'Director, Sargodha Property House'
+    }
+  },
+  {
+    id: 'p3',
+    slug: 'must-manifest-brand',
+    title: 'Must Manifest — Lifestyle Brand Website',
+    category: 'Websites',
+    client: 'Must Manifest',
+    year: '2025',
+    tags: ['Websites', 'Lifestyle Brand', 'Modern Design', 'Branding'],
     image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop'
     ],
-    overview: 'A modern design atelier sought a bold, authoritative visual identity spanning dynamic logo marks, corporate typography, and social media brand guidelines.',
-    challenge: 'Creating a brand mark that commands presence across micro-scale mobile icons as well as large-format architectural billboards.',
-    solution: 'We engineered a geometric, sharp monogram system paired with an electric color palette, custom corporate fonts, and comprehensive Figma brand guidelines.',
-    servicesProvided: ['Brand Identity', 'Logo Suite', 'Typography Rules', 'Social Media Templates'],
+    liveUrl: 'https://mustmanifest.com/',
+    overview: 'A lifestyle and manifestation brand sought a bold, premium web experience to resonate with their growing global audience and convert visitors into community members.',
+    challenge: 'Building a compelling digital identity that matched the brand\'s transformative vision and premium positioning.',
+    solution: 'GrafiwebPk crafted a visually immersive brand website with cinematic animations, modern typography, and community-focused conversion flows.',
+    servicesProvided: ['Brand Identity', 'Web Design', 'Frontend Development', 'Motion Design'],
     results: [
-      { metric: '100%', label: 'Brand Consistency Across Channels' },
-      { metric: '18+', label: 'Deliverable Asset Kits' },
-      { metric: '4.8x', label: 'Inbound Pitch Inquiries' }
+      { metric: '+480%', label: 'Time on Site' },
+      { metric: '22K+', label: 'Monthly Unique Visitors' },
+      { metric: '5.6x', label: 'Community Sign-up Rate' }
     ],
-    technologies: ['Figma', 'Adobe Illustrator', 'Brand Architecture', 'Vector Systems'],
+    technologies: ['React', 'GSAP', 'Tailwind CSS', 'TypeScript'],
     testimonial: {
-      quote: 'The visual identity crafted by Bahar Ali and the GrafiwebPk team gave our company the exact premium stature we needed.',
-      author: 'Hamza Tariq',
-      role: 'Founder, Lumina Creative'
-    }
-  },
-  {
-    id: 'p3',
-    slug: 'viral-social-growth-engine',
-    title: 'ScalePulse Social Growth Campaign',
-    category: 'Social Media',
-    client: 'ScalePulse Agency',
-    year: '2025',
-    tags: ['Social Media', 'Content Strategy', 'Instagram Growth', 'Carousels'],
-    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1200&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1200&auto=format&fit=crop'
-    ],
-    overview: 'An agency scaling B2B client acquisition needed an authoritative Instagram and Facebook presence with regular educational carousels and high-converting reels.',
-    challenge: 'Low engagement rates and sporadic posting schedule that failed to build audience trust.',
-    solution: 'GrafiwebPk established a 30-day recurring content engine: daily strategic carousels, custom branded graphics, active story polls, and automated comment-to-DM routing.',
-    servicesProvided: ['Social Media Management', 'Content Strategy', 'Post Design', 'Audience Growth'],
-    results: [
-      { metric: '+420%', label: 'Organic Monthly Impressions' },
-      { metric: '18.4K', label: 'New Targeted Followers' },
-      { metric: '65+', label: 'Qualified Inbound Leads/Month' }
-    ],
-    technologies: ['Content Calendars', 'Figma', 'Instagram Analytics', 'Social Funnels'],
-    testimonial: {
-      quote: 'Their social media management is relentless and consistent. Our profile looks like a top-tier global firm now.',
-      author: 'Zainab Qureshi',
-      role: 'Growth Marketing Lead, ScalePulse'
+      quote: 'The website GrafiwebPk built for Must Manifest perfectly captures our brand\'s energy. It\'s stunning and converts brilliantly.',
+      author: 'Founder',
+      role: 'Must Manifest'
     }
   },
   {
     id: 'p4',
-    slug: 'creator-youtube-packaging',
-    title: 'TechVision YouTube Channel Scaling',
-    category: 'YouTube',
-    client: 'TechVision Media',
+    slug: 'mahala-export-b2b-platform',
+    title: 'Mahala Export — B2B Trade Platform',
+    category: 'Websites',
+    client: 'Mahala Export',
     year: '2025',
-    tags: ['YouTube', 'Thumbnail Design', 'Channel SEO', 'Audience Retention'],
-    image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=1200&auto=format&fit=crop',
+    tags: ['Websites', 'B2B', 'Export Trade', 'Lead Generation'],
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop'
     ],
-    overview: 'A rapidly expanding tech media channel producing weekly reviews needed high-CTR thumbnail packaging, SEO optimization, and channel branding to break into the 100K subscriber tier.',
-    challenge: 'Great video production hampered by low 3.2% click-through rates and suboptimal title packaging.',
-    solution: 'GrafiwebPk introduced high-contrast, emotionally compelling 3D thumbnails, click-tested title variations, keyword-rich video descriptions, and scheduled upload workflows.',
-    servicesProvided: ['Thumbnail Design', 'YouTube SEO', 'Channel Branding', 'Upload Strategy'],
+    liveUrl: 'https://mahalaexport.com',
+    overview: 'An international export company needed a professional B2B web platform to attract global buyers, showcase product catalogs, and establish a trustworthy digital presence for international trade.',
+    challenge: 'Competing with established exporters online while lacking a credible international-standard digital presence.',
+    solution: 'We built a polished B2B export platform with product showcases, trust signals, multilingual-ready structure, and a direct inquiry funnel for global buyers.',
+    servicesProvided: ['B2B Web Design', 'Product Showcase', 'SEO', 'Lead Capture'],
     results: [
-      { metric: '11.8%', label: 'Average Video CTR' },
-      { metric: '140K+', label: 'Subscribers Surpassed' },
-      { metric: '2.8M', label: 'Quarterly Video Views' }
+      { metric: '+390%', label: 'International Inquiries' },
+      { metric: '60+', label: 'Countries in Visitor Base' },
+      { metric: '2.9x', label: 'B2B Lead Conversion Rate' }
     ],
-    technologies: ['Photoshop', 'YouTube Studio', 'SEO Keyword Research', 'A/B Testing'],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'SEO Stack'],
     testimonial: {
-      quote: 'GrafiwebPk thumbnails doubled our views within the first month. They understand the YouTube algorithm better than anyone.',
-      author: 'Bilal Farooq',
-      role: 'Lead Creator, TechVision'
+      quote: 'GrafiwebPk gave Mahala Export a platform that finally matches our international ambitions. World-class execution.',
+      author: 'CEO',
+      role: 'Mahala Export'
     }
   },
   {
@@ -145,30 +151,30 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: 'p6',
-    slug: 'omnichannel-growth-acquisition',
-    title: 'Optima Performance Creative Campaign',
-    category: 'Creative',
-    client: 'Optima Wellness',
+    slug: 'scalepulse-social-growth',
+    title: 'ScalePulse Social Growth Campaign',
+    category: 'Social Media',
+    client: 'ScalePulse Agency',
     year: '2025',
-    tags: ['Creative', 'Digital Marketing', 'Ad Creatives', 'Visual Content'],
-    image: 'https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=1200&auto=format&fit=crop',
+    tags: ['Social Media', 'Content Strategy', 'Instagram Growth', 'Carousels'],
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1200&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1200&auto=format&fit=crop'
     ],
-    overview: 'An emerging consumer health brand sought high-converting digital advertising creatives, motion banners, and landing page visual systems for their nationwide product rollout.',
-    challenge: 'High cost-per-click and low ad engagement from generic stock graphic creatives.',
-    solution: 'We developed custom 3D motion graphics, punchy copywriting hooks, and high-contrast social ads that stopped user scrolling and drove direct sales.',
-    servicesProvided: ['Marketing Creatives', 'Visual Content', 'Digital Marketing Strategy', 'Ad Design'],
+    overview: 'An agency scaling B2B client acquisition needed an authoritative Instagram and Facebook presence with regular educational carousels and high-converting reels.',
+    challenge: 'Low engagement rates and sporadic posting schedule that failed to build audience trust.',
+    solution: 'GrafiwebPk established a 30-day recurring content engine: daily strategic carousels, custom branded graphics, active story polls, and automated comment-to-DM routing.',
+    servicesProvided: ['Social Media Management', 'Content Strategy', 'Post Design', 'Audience Growth'],
     results: [
-      { metric: '4.2x', label: 'Return on Ad Spend (ROAS)' },
-      { metric: '-48%', label: 'Cost Per Acquisition (CPA)' },
-      { metric: '1.2M+', label: 'Paid Impressions Delivered' }
+      { metric: '+420%', label: 'Organic Monthly Impressions' },
+      { metric: '18.4K', label: 'New Targeted Followers' },
+      { metric: '65+', label: 'Qualified Inbound Leads/Month' }
     ],
-    technologies: ['Adobe After Effects', 'Figma', 'Meta Ads Manager', 'Motion Graphics'],
+    technologies: ['Content Calendars', 'Figma', 'Instagram Analytics', 'Social Funnels'],
     testimonial: {
-      quote: 'GrafiwebPk creatives consistently beat every benchmark we had set. Professional, prompt, and highly skilled.',
-      author: 'Ayesha Malik',
-      role: 'CMO, Optima Wellness'
+      quote: 'Their social media management is relentless and consistent. Our profile looks like a top-tier global firm now.',
+      author: 'Zainab Qureshi',
+      role: 'Growth Marketing Lead, ScalePulse'
     }
   }
 ];

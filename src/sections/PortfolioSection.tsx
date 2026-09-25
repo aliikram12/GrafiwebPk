@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import { portfolioData } from '../data/portfolioData';
 import { gsap, prefersReducedMotion, cardStaggerReveal } from '../utils/animations';
 
-const categories = ['ALL', 'Websites', 'Branding', 'Social Media', 'YouTube', 'AI', 'Creative'];
+const categories = ['ALL', 'Websites', 'Social Media', 'AI', 'Branding', 'YouTube', 'Creative'];
 
 export default function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState('ALL');
@@ -141,7 +141,7 @@ export default function PortfolioSection() {
               </div>
 
               {/* Bottom Card Action Bar */}
-              <div className="px-6 sm:px-7 pb-6 pt-2">
+              <div className="px-6 sm:px-7 pb-6 pt-2 flex items-center justify-between gap-3">
                 <Link
                   to={`/portfolio/${project.id}`}
                   className="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#2F80ED] group-hover:text-[#38BDF8] transition-colors"
@@ -149,6 +149,18 @@ export default function PortfolioSection() {
                   <span>View Case Study</span>
                   <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1 text-xs font-mono font-semibold text-[#AAB4C3] hover:text-emerald-400 transition-colors"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    <span>Live Site</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}

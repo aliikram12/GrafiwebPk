@@ -19,7 +19,7 @@ export default function ContactSection() {
     email: '',
     phone: '',
     service: 'Web Design & Development',
-    budget: '$500 - $1,500',
+    budget: '$50 - $250',
     message: ''
   });
 
@@ -37,10 +37,10 @@ export default function ContactSection() {
   ];
 
   const budgetList = [
-    '< $500',
-    '$500 - $1,500',
-    '$1,500 - $5,000',
-    '$5,000+'
+    '$50 - $250',
+    '$250 - $500',
+    '$500 - $750',
+    '$750 - $1,000'
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -153,7 +153,7 @@ export default function ContactSection() {
                   <div>
                     <span className="text-[10px] uppercase font-mono text-[#64748B] block">Operating Hours</span>
                     <p className="text-xs sm:text-sm font-semibold text-[#F4F7FB]">
-                      Mon – Sat: 09:00 – 21:00 PKT (Global Coverage)
+                      Mon – Sat: 9:00 AM – 9:00 PM PKT (Global Coverage)
                     </p>
                   </div>
                 </div>
@@ -233,7 +233,7 @@ export default function ContactSection() {
                           email: '',
                           phone: '',
                           service: 'Web Design & Development',
-                          budget: '$500 - $1,500',
+                          budget: '$50 - $250',
                           message: ''
                         });
                       }}

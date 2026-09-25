@@ -6,8 +6,8 @@ export const pricingData: PricingPlan[] = [
     name: 'Launch & Brand Pack',
     badge: 'Essential Growth',
     description: 'Perfect for startups, new businesses, and creators needing a high-impact web launch and complete brand identity.',
-    monthlyPrice: 650,
-    yearlyPrice: 520, // 20% discount
+    monthlyPrice: 500,
+    yearlyPrice: 400, // 20% discount
     popular: false,
     ctaText: 'Get Started With Launch',
     features: [
@@ -26,8 +26,8 @@ export const pricingData: PricingPlan[] = [
     name: 'Growth & Omnichannel',
     badge: 'Most Popular',
     description: 'Our flagship full-stack growth tier combining custom web design, daily social media execution, and YouTube scaling.',
-    monthlyPrice: 1450,
-    yearlyPrice: 1160,
+    monthlyPrice: 1000,
+    yearlyPrice: 800,
     popular: true,
     ctaText: 'Scale With Growth',
     features: [
@@ -46,8 +46,8 @@ export const pricingData: PricingPlan[] = [
     name: 'Agency Powerhouse',
     badge: 'Full Suite & AI',
     description: 'Autonomous creative and technology engine for high-volume creators, multi-brand companies, and enterprise ventures.',
-    monthlyPrice: 2850,
-    yearlyPrice: 2280,
+    monthlyPrice: 2500,
+    yearlyPrice: 2000,
     popular: false,
     ctaText: 'Consult With Bahar Ali',
     features: [

@@ -33,6 +33,7 @@ export interface PortfolioItem {
   servicesProvided: string[];
   results: { metric: string; label: string }[];
   technologies: string[];
+  liveUrl?: string;
   testimonial?: {
     quote: string;
     author: string;

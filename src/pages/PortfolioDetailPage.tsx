@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, CheckCircle2, Quote, MessageCircle } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, CheckCircle2, Quote, MessageCircle, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function PortfolioDetailPage() {
@@ -59,6 +59,20 @@ export default function PortfolioDetailPage() {
             <span className="text-[#64748B] uppercase block mb-1">Core Stack</span>
             <span className="text-[#F4F7FB] font-semibold">{project.technologies.slice(0, 2).join(', ')}</span>
           </div>
+          {project.liveUrl && (
+            <div className="col-span-2 sm:col-span-4 pt-4 border-t border-[rgba(255,255,255,0.04)]">
+              <span className="text-[#64748B] uppercase block mb-2">Live Website</span>
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#171D26] border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 hover:border-emerald-400/50 text-xs font-mono font-bold transition-all"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                <span>{project.liveUrl}</span>
+              </a>
+            </div>
+          )}
         </div>
       </section>
 

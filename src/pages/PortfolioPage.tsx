@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
-const categories = ['ALL', 'WEBSITES', 'BRANDING', 'SOCIAL MEDIA', 'YOUTUBE', 'AI', 'CREATIVE'];
+const categories = ['ALL', 'WEBSITES', 'SOCIAL MEDIA', 'AI', 'BRANDING', 'YOUTUBE', 'CREATIVE'];
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState('ALL');
@@ -108,6 +108,17 @@ export default function PortfolioPage() {
                   </span>
                 </div>
               </Link>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#171D26] border border-emerald-500/25 text-emerald-400 hover:text-emerald-300 hover:border-emerald-500/50 text-xs font-mono font-bold transition-all"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>Visit Live Site →</span>
+                </a>
+              )}
             </div>
           ))}
         </div>
