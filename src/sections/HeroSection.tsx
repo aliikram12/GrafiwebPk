@@ -90,9 +90,9 @@ export default function HeroSection() {
         <img
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop"
           alt="GrafiwebPk Creative Technology & Digital Agency Workspace"
-          className="w-full h-full object-cover object-center opacity-20 filter grayscale"
+          className="w-full h-full object-cover object-center opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/90 via-[#11151C]/95 to-[#11151C]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
       </div>
 
       {/* Subtle grid texture */}

@@ -45,65 +45,79 @@ export default function ServiceDetailPage() {
   };
 
   return (
-    <div id="service-detail-page" className="pt-32 pb-24 bg-[#11151C]">
-      {/* Back Link */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-8">
-        <Link
-          to="/services"
-          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#AAB4C3] hover:text-[#2F80ED] transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to All Capabilities</span>
-        </Link>
-      </div>
-
-      {/* Service Hero Header */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-16 lg:mb-24">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-14 h-14 rounded-2xl bg-[#171D26] border border-[rgba(255,255,255,0.06)] shadow-[-3px_-3px_8px_rgba(255,255,255,0.02),3px_3px_8px_rgba(0,0,0,0.5)] flex items-center justify-center">
-            {getIcon(service.iconName)}
-          </div>
-          <div>
-            <span className="text-xs font-mono uppercase text-[#38BDF8] tracking-widest font-bold">
-              GRAFIWEBPK // CAPABILITY {service.number}
-            </span>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#F4F7FB] font-display leading-[1.05]">
-              {service.title}
-            </h1>
-          </div>
-        </div>
-
-        <p className="text-base sm:text-xl text-[#AAB4C3] font-light max-w-4xl leading-relaxed mt-4">
-          {service.fullDesc}
-        </p>
-
-        {/* Action Pills */}
-        <div className="flex flex-wrap items-center gap-3.5 mt-6">
-          <a
-            href={`https://wa.me/923271847673?text=Hi%20Bahar%20Ali,%20I%20want%20to%20discuss%20${encodeURIComponent(service.title)}%20with%20GrafiwebPk.`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider"
-          >
-            <MessageCircle className="w-4 h-4" />
-            <span>Consult Bahar Ali on WhatsApp</span>
-          </a>
-          <Link
-            to="/contact"
-            className="btn-secondary inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider"
-          >
-            <span>Request Written Proposal</span>
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        </div>
-
-        {/* Hero Image - Neumorphic Frame */}
-        <div className="mt-12 rounded-3xl overflow-hidden border border-[rgba(255,255,255,0.05)] aspect-[21/9] relative bg-[#171D26] shadow-[-6px_-6px_18px_rgba(255,255,255,0.02),8px_8px_24px_rgba(0,0,0,0.6)]">
+    <div id="service-detail-page" className="bg-[#11151C]">
+      {/* Service Hero Header with Background Image & Dark Overlay */}
+      <section className="relative pt-36 pb-16 lg:pt-44 lg:pb-24 overflow-hidden border-b border-[rgba(255,255,255,0.05)] mb-16 lg:mb-24">
+        {/* Background Image with Black Overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
           <img
             src={service.image}
             alt={service.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center opacity-30 scale-105"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
+          <div className="absolute inset-0 bg-agency-grid opacity-25" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Back Link */}
+          <div className="mb-8">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#AAB4C3] hover:text-[#2F80ED] transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to All Capabilities</span>
+            </Link>
+          </div>
+
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 rounded-2xl bg-[#171D26] border border-[rgba(255,255,255,0.06)] shadow-[-3px_-3px_8px_rgba(255,255,255,0.02),3px_3px_8px_rgba(0,0,0,0.5)] flex items-center justify-center">
+              {getIcon(service.iconName)}
+            </div>
+            <div>
+              <span className="text-xs font-mono uppercase text-[#38BDF8] tracking-widest font-bold">
+                GRAFIWEBPK // CAPABILITY {service.number}
+              </span>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#F4F7FB] font-display leading-[1.05]">
+                {service.title}
+              </h1>
+            </div>
+          </div>
+
+          <p className="text-base sm:text-xl text-[#AAB4C3] font-light max-w-4xl leading-relaxed mt-4">
+            {service.fullDesc}
+          </p>
+
+          {/* Action Pills */}
+          <div className="flex flex-wrap items-center gap-3.5 mt-8">
+            <a
+              href={`https://wa.me/923271847673?text=Hi%20Bahar%20Ali,%20I%20want%20to%20discuss%20${encodeURIComponent(service.title)}%20with%20GrafiwebPk.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>Consult Bahar Ali on WhatsApp</span>
+            </a>
+            <Link
+              to="/contact"
+              className="btn-secondary inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider"
+            >
+              <span>Request Written Proposal</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Hero Image Showcase Frame */}
+          <div className="mt-12 rounded-3xl overflow-hidden border border-[rgba(255,255,255,0.05)] aspect-[21/9] relative bg-[#171D26] shadow-[-6px_-6px_18px_rgba(255,255,255,0.02),8px_8px_24px_rgba(0,0,0,0.6)]">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#11151C]/60 via-transparent to-transparent" />
+          </div>
         </div>
       </section>
 

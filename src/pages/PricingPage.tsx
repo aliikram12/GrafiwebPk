@@ -27,21 +27,34 @@ export default function PricingPage() {
   ];
 
   return (
-    <div id="pricing-page" className="pt-32 pb-24 bg-[#11151C]">
-      {/* Hero Header */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
-          <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
-            // INVESTMENT MODELS & TRANSPARENCY
-          </span>
+    <div id="pricing-page" className="bg-[#11151C]">
+      {/* Hero Header with Background Image & Dark Overlay */}
+      <section className="relative pt-36 pb-20 lg:pt-44 lg:pb-28 overflow-hidden border-b border-[rgba(255,255,255,0.05)] mb-12">
+        {/* Background Image with Black Overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <img
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1800&auto=format&fit=crop"
+            alt="GrafiwebPk Pricing & Investment Models"
+            className="w-full h-full object-cover object-center opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
+          <div className="absolute inset-0 bg-agency-grid opacity-25" />
         </div>
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-6">
-          Predictable, Value-Driven Investment Tiers Engineered For Scale.
-        </h1>
-        <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
-          No hidden hourly billings, no surprises. Transparent milestone sprints designed to deliver high-converting websites, viral media, and automated workflows on time and within budget.
-        </p>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
+            <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
+              // INVESTMENT MODELS & TRANSPARENCY
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-6">
+            Predictable, Value-Driven Investment Tiers Engineered For Scale.
+          </h1>
+          <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
+            No hidden hourly billings, no surprises. Transparent milestone sprints designed to deliver high-converting websites, viral media, and automated workflows on time and within budget.
+          </p>
+        </div>
       </section>
 
       {/* Embedded Pricing Section */}

@@ -3,21 +3,34 @@ import { MessageCircle, Mail, Globe } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <div id="contact-page" className="pt-32 pb-24 bg-[#11151C]">
-      {/* Contact Hero Header */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-16">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
-          <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
-            // PARTNERSHIP & PROJECT INQUIRIES
-          </span>
+    <div id="contact-page" className="bg-[#11151C]">
+      {/* Contact Hero Header with Background Image & Dark Overlay */}
+      <section className="relative pt-36 pb-20 lg:pt-44 lg:pb-28 overflow-hidden border-b border-[rgba(255,255,255,0.05)] mb-12">
+        {/* Background Image with Black Overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1800&auto=format&fit=crop"
+            alt="GrafiwebPk Global Communications & Direct Partnership Lounge"
+            className="w-full h-full object-cover object-center opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
+          <div className="absolute inset-0 bg-agency-grid opacity-25" />
         </div>
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-6">
-          Let’s Build Something Powerful Together.
-        </h1>
-        <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
-          Whether you need a high-converting digital flagship, iconic graphic branding, viral social/YouTube media scaling, or automated AI pipelines, Founder & CEO Bahar Ali and the GrafiwebPk team are ready to engage.
-        </p>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
+            <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
+              // PARTNERSHIP & PROJECT INQUIRIES
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-6">
+            Let’s Build Something Powerful Together.
+          </h1>
+          <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
+            Whether you need a high-converting digital flagship, iconic graphic branding, viral social/YouTube media scaling, or automated AI pipelines, Founder & CEO Bahar Ali and the GrafiwebPk team are ready to engage.
+          </p>
+        </div>
       </section>
 
       {/* Embedded Main Interactive Contact Section */}

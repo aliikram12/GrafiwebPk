@@ -34,21 +34,34 @@ export default function ServicesPage() {
   };
 
   return (
-    <div id="services-page" className="pt-32 pb-24 bg-[#11151C]">
-      {/* Services Hero Header */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-20 lg:mb-28">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
-          <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
-            // OUR SERVICE CAPABILITIES
-          </span>
+    <div id="services-page" className="bg-[#11151C]">
+      {/* Services Hero Header with Background Image & Dark Overlay */}
+      <section className="relative pt-36 pb-20 lg:pt-44 lg:pb-28 overflow-hidden border-b border-[rgba(255,255,255,0.05)] mb-16 lg:mb-24">
+        {/* Background Image with Black Overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1800&auto=format&fit=crop"
+            alt="GrafiwebPk Digital Capabilities & Tech Workspace"
+            className="w-full h-full object-cover object-center opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
+          <div className="absolute inset-0 bg-agency-grid opacity-25" />
         </div>
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-6">
-          Architecting High-Converting Websites, Creative Media & AI Systems.
-        </h1>
-        <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
-          From custom high-performance web development and bold brand identity to high-CTR YouTube growth and automated AI pipelines, discover our full suite of digital agency services.
-        </p>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
+            <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
+              // OUR SERVICE CAPABILITIES
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-6">
+            Architecting High-Converting Websites, Creative Media & AI Systems.
+          </h1>
+          <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
+            From custom high-performance web development and bold brand identity to high-CTR YouTube growth and automated AI pipelines, discover our full suite of digital agency services.
+          </p>
+        </div>
       </section>
 
       {/* Services Detailed List - Neumorphic Cards */}

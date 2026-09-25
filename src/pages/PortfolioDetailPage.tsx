@@ -14,65 +14,78 @@ export default function PortfolioDetailPage() {
   const nextProject = portfolioData[(currentIndex + 1) % portfolioData.length];
 
   return (
-    <div id="portfolio-detail-page" className="pt-32 pb-24 bg-[#11151C]">
-      {/* Back Link */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-8">
-        <Link
-          to="/portfolio"
-          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#AAB4C3] hover:text-[#2F80ED] transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Case Studies</span>
-        </Link>
-      </div>
-
-      {/* Case Header */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
-        <div className="flex flex-wrap items-center gap-3 mb-4">
-          <span className="px-3.5 py-1 rounded-xl text-xs font-mono uppercase bg-[#171D26] text-[#38BDF8] border border-[rgba(255,255,255,0.06)] shadow-[-2px_-2px_5px_rgba(255,255,255,0.02),2px_2px_5px_rgba(0,0,0,0.4)] font-bold">
-            {project.category}
-          </span>
-          <span className="text-xs font-mono text-[#64748B]">
-            Delivered in {project.year}
-          </span>
+    <div id="portfolio-detail-page" className="bg-[#11151C]">
+      {/* Case Header with Background Image & Dark Overlay */}
+      <section className="relative pt-36 pb-16 lg:pt-44 lg:pb-24 overflow-hidden border-b border-[rgba(255,255,255,0.05)] mb-12">
+        {/* Background Image with Black Overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover object-center opacity-30 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
+          <div className="absolute inset-0 bg-agency-grid opacity-25" />
         </div>
 
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#F4F7FB] font-display leading-[1.05] max-w-5xl mb-8">
-          {project.title}
-        </h1>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Back Link */}
+          <div className="mb-8">
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#AAB4C3] hover:text-[#2F80ED] transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Case Studies</span>
+            </Link>
+          </div>
 
-        {/* Project Meta Bar - Inset Neumorphic Surface */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 p-6 rounded-2xl bg-[#0E1217] border border-[rgba(255,255,255,0.04)] shadow-[inset_1px_1px_4px_rgba(0,0,0,0.7)] text-xs sm:text-sm font-mono">
-          <div>
-            <span className="text-[#64748B] uppercase block mb-1">Client</span>
-            <span className="text-[#F4F7FB] font-semibold">{project.client}</span>
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <span className="px-3.5 py-1 rounded-xl text-xs font-mono uppercase bg-[#171D26] text-[#38BDF8] border border-[rgba(255,255,255,0.06)] shadow-[-2px_-2px_5px_rgba(255,255,255,0.02),2px_2px_5px_rgba(0,0,0,0.4)] font-bold">
+              {project.category}
+            </span>
+            <span className="text-xs font-mono text-[#64748B]">
+              Delivered in {project.year}
+            </span>
           </div>
-          <div>
-            <span className="text-[#64748B] uppercase block mb-1">Category</span>
-            <span className="text-[#38BDF8] font-semibold">{project.category}</span>
-          </div>
-          <div>
-            <span className="text-[#64748B] uppercase block mb-1">Year</span>
-            <span className="text-[#F4F7FB] font-semibold">{project.year}</span>
-          </div>
-          <div>
-            <span className="text-[#64748B] uppercase block mb-1">Core Stack</span>
-            <span className="text-[#F4F7FB] font-semibold">{project.technologies.slice(0, 2).join(', ')}</span>
-          </div>
-          {project.liveUrl && (
-            <div className="col-span-2 sm:col-span-4 pt-4 border-t border-[rgba(255,255,255,0.04)]">
-              <span className="text-[#64748B] uppercase block mb-2">Live Website</span>
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#171D26] border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 hover:border-emerald-400/50 text-xs font-mono font-bold transition-all"
-              >
-                <ExternalLink className="w-3.5 h-3.5" />
-                <span>{project.liveUrl}</span>
-              </a>
+
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#F4F7FB] font-display leading-[1.05] max-w-5xl mb-8">
+            {project.title}
+          </h1>
+
+          {/* Project Meta Bar - Inset Neumorphic Surface */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 p-6 rounded-2xl bg-[#0E1217] border border-[rgba(255,255,255,0.04)] shadow-[inset_1px_1px_4px_rgba(0,0,0,0.7)] text-xs sm:text-sm font-mono">
+            <div>
+              <span className="text-[#64748B] uppercase block mb-1">Client</span>
+              <span className="text-[#F4F7FB] font-semibold">{project.client}</span>
             </div>
-          )}
+            <div>
+              <span className="text-[#64748B] uppercase block mb-1">Category</span>
+              <span className="text-[#38BDF8] font-semibold">{project.category}</span>
+            </div>
+            <div>
+              <span className="text-[#64748B] uppercase block mb-1">Year</span>
+              <span className="text-[#F4F7FB] font-semibold">{project.year}</span>
+            </div>
+            <div>
+              <span className="text-[#64748B] uppercase block mb-1">Core Stack</span>
+              <span className="text-[#F4F7FB] font-semibold">{project.technologies.slice(0, 2).join(', ')}</span>
+            </div>
+            {project.liveUrl && (
+              <div className="col-span-2 sm:col-span-4 pt-4 border-t border-[rgba(255,255,255,0.04)]">
+                <span className="text-[#64748B] uppercase block mb-2">Live Website</span>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#171D26] border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 hover:border-emerald-400/50 text-xs font-mono font-bold transition-all"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>{project.liveUrl}</span>
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

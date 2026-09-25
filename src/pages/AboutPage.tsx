@@ -35,39 +35,52 @@ export default function AboutPage() {
   ];
 
   return (
-    <div id="about-page" className="pt-32 pb-24 bg-[#11151C]">
-      {/* Hero Intro */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-20 lg:mb-28">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
-          <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
-            // AGENCY CULTURE & PHILOSOPHY
-          </span>
-        </div>
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-8">
-          We Combine Creativity, Technology & Strategy To Build Market Leaders.
-        </h1>
-        <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
-          GrafiwebPk is an agile creative and technology agency. Under the leadership of Founder & CEO 
-          <span className="text-[#F4F7FB] font-semibold"> Bahar Ali</span>, we help ambitious businesses, creators, 
-          and brands dominate their digital landscapes through relentless design excellence and intelligent automation.
-        </p>
-
-        {/* Feature Hero Card - Neumorphic Container */}
-        <div className="mt-12 rounded-3xl overflow-hidden border border-[rgba(255,255,255,0.05)] aspect-[21/9] relative bg-[#171D26] shadow-[-6px_-6px_16px_rgba(255,255,255,0.02),8px_8px_24px_rgba(0,0,0,0.6)]">
+    <div id="about-page" className="bg-[#11151C]">
+      {/* Hero Intro with Background Image & Dark Overlay */}
+      <section className="relative pt-36 pb-20 lg:pt-44 lg:pb-28 overflow-hidden border-b border-[rgba(255,255,255,0.05)]">
+        {/* Background Image with Black Overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
           <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop"
-            alt="GrafiwebPk Creative Engineering Pod"
-            className="w-full h-full object-cover opacity-40"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1800&auto=format&fit=crop"
+            alt="GrafiwebPk Creative Agency Studio Background"
+            className="w-full h-full object-cover object-center opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#11151C] via-[#11151C]/50 to-transparent" />
-          <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 text-white max-w-2xl">
-            <span className="text-xs font-mono uppercase text-[#38BDF8] tracking-widest font-bold">
-              GRAFIWEBPK HEADQUARTERS & REMOTE CORPS
+          <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
+          <div className="absolute inset-0 bg-agency-grid opacity-25" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
+            <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
+              // AGENCY CULTURE & PHILOSOPHY
             </span>
-            <h3 className="text-xl sm:text-3xl font-bold font-display mt-2 text-[#F4F7FB]">
-              Where strategic rigor meets unrestrained artistic firepower.
-            </h3>
+          </div>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-8">
+            We Combine Creativity, Technology & Strategy To Build Market Leaders.
+          </h1>
+          <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
+            GrafiwebPk is an agile creative and technology agency. Under the leadership of Founder & CEO 
+            <span className="text-[#F4F7FB] font-semibold"> Bahar Ali</span>, we help ambitious businesses, creators, 
+            and brands dominate their digital landscapes through relentless design excellence and intelligent automation.
+          </p>
+
+          {/* Feature Hero Card - Neumorphic Container */}
+          <div className="mt-12 rounded-3xl overflow-hidden border border-[rgba(255,255,255,0.05)] aspect-[21/9] relative bg-[#171D26] shadow-[-6px_-6px_16px_rgba(255,255,255,0.02),8px_8px_24px_rgba(0,0,0,0.6)]">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop"
+              alt="GrafiwebPk Creative Engineering Pod"
+              className="w-full h-full object-cover opacity-60"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#11151C] via-[#11151C]/60 to-transparent" />
+            <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 text-white max-w-2xl">
+              <span className="text-xs font-mono uppercase text-[#38BDF8] tracking-widest font-bold">
+                GRAFIWEBPK HEADQUARTERS & GLOBAL CORPS
+              </span>
+              <h3 className="text-xl sm:text-3xl font-bold font-display mt-2 text-[#F4F7FB]">
+                Where strategic rigor meets unrestrained artistic firepower.
+              </h3>
+            </div>
           </div>
         </div>
       </section>

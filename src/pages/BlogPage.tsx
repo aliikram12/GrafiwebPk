@@ -17,41 +17,53 @@ export default function BlogPage() {
   });
 
   return (
-    <div id="blog-page" className="pt-32 pb-24 bg-[#11151C]">
-      {/* Header */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-16 lg:mb-20">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
-          <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
-            // THOUGHT LEADERSHIP & INSIGHTS
-          </span>
+    <div id="blog-page" className="bg-[#11151C]">
+      {/* Header with Background Image & Dark Overlay */}
+      <section className="relative pt-36 pb-20 lg:pt-44 lg:pb-28 overflow-hidden border-b border-[rgba(255,255,255,0.05)] mb-16 lg:mb-20">
+        {/* Background Image with Black Overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <img
+            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1800&auto=format&fit=crop"
+            alt="GrafiwebPk Digital Insights & Journal"
+            className="w-full h-full object-cover object-center opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
+          <div className="absolute inset-0 bg-agency-grid opacity-25" />
         </div>
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-6">
-          The GrafiwebPk Journal: Perspectives on design, engineering, and digital growth.
-        </h1>
-        <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
-          Deep dives into modern frontend architecture, high-CTR thumbnail strategy, design tokenization, and AI automation.
-        </p>
 
-        {/* Search & Tag Filter Bar */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-between items-stretch sm:items-center mt-12 pt-8 border-t border-[rgba(255,255,255,0.04)]">
-          {/* Tags - Neumorphic Pills */}
-          <div className="flex flex-wrap gap-2">
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                type="button"
-                onClick={() => setSelectedTag(tag)}
-                className={`px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all cursor-pointer focus:outline-none ${
-                  selectedTag === tag
-                    ? 'bg-[#0E1217] text-[#2F80ED] border border-[#2F80ED]/40 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.7)]'
-                    : 'bg-[#171D26] text-[#AAB4C3] hover:text-[#F4F7FB] border border-[rgba(255,255,255,0.04)] shadow-[-2px_-2px_5px_rgba(255,255,255,0.02),2px_2px_5px_rgba(0,0,0,0.4)]'
-                }`}
-              >
-                {tag}
-              </button>
-            ))}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#2F80ED]" />
+            <span className="text-xs uppercase tracking-[0.25em] font-mono font-semibold text-[#2F80ED]">
+              // THOUGHT LEADERSHIP & INSIGHTS
+            </span>
           </div>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#F4F7FB] leading-[1.05] font-display max-w-5xl mb-6">
+            The GrafiwebPk Journal: Perspectives on design, engineering, and digital growth.
+          </h1>
+          <p className="text-lg sm:text-xl text-[#AAB4C3] font-light max-w-3xl leading-relaxed">
+            Deep dives into modern frontend architecture, high-CTR thumbnail strategy, design tokenization, and AI automation.
+          </p>
+
+          {/* Search & Tag Filter Bar */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-between items-stretch sm:items-center mt-12 pt-8 border-t border-[rgba(255,255,255,0.04)]">
+            {/* Tags - Neumorphic Pills */}
+            <div className="flex flex-wrap gap-2">
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  type="button"
+                  onClick={() => setSelectedTag(tag)}
+                  className={`px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all cursor-pointer focus:outline-none ${
+                    selectedTag === tag
+                      ? 'bg-[#0E1217] text-[#2F80ED] border border-[#2F80ED]/40 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.7)]'
+                      : 'bg-[#171D26] text-[#AAB4C3] hover:text-[#F4F7FB] border border-[rgba(255,255,255,0.04)] shadow-[-2px_-2px_5px_rgba(255,255,255,0.02),2px_2px_5px_rgba(0,0,0,0.4)]'
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
 
           {/* Search Inset Input */}
           <div className="relative w-full sm:w-72">
@@ -64,6 +76,7 @@ export default function BlogPage() {
               className="neu-input w-full pl-10 pr-4 py-2 rounded-xl text-xs"
             />
           </div>
+        </div>
         </div>
       </section>
 

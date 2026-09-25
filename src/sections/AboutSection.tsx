@@ -151,9 +151,11 @@ export default function AboutSection() {
             {/* Leadership Profile Card - Neumorphic Surface */}
             <div className="about-card p-6 sm:p-8 rounded-3xl bg-[#171D26] border border-[rgba(255,255,255,0.05)] shadow-[-5px_-5px_14px_rgba(255,255,255,0.025),6px_6px_18px_rgba(0,0,0,0.6)]">
               <div className="flex items-center gap-4 mb-5 pb-5 border-b border-[rgba(255,255,255,0.04)]">
-                <div className="w-14 h-14 rounded-2xl bg-[#0E1217] border border-[rgba(255,255,255,0.06)] shadow-[inset_2px_2px_5px_rgba(0,0,0,0.7)] text-[#2F80ED] flex items-center justify-center font-bold text-xl font-display">
-                  BA
-                </div>
+                <img
+                  src="/CEO.png"
+                  alt="Bahar Ali - Founder & CEO"
+                  className="w-16 h-16 rounded-2xl object-cover object-top border border-[rgba(255,255,255,0.1)] shadow-[inset_1px_1px_3px_rgba(0,0,0,0.6),-2px_-2px_6px_rgba(255,255,255,0.02),3px_3px_8px_rgba(0,0,0,0.5)]"
+                />
                 <div>
                   <div className="flex items-center gap-2">
                     <h3 className="text-lg font-bold text-[#F4F7FB] font-display">Bahar Ali</h3>

@@ -13,41 +13,56 @@ export default function BlogDetailPage() {
   const related = blogData.filter((p) => p.id !== post.id).slice(0, 2);
 
   return (
-    <div id="blog-detail-page" className="pt-32 pb-24 bg-[#11151C]">
-      {/* Back Link */}
-      <div className="max-w-4xl mx-auto px-6 mb-8">
-        <Link
-          to="/blog"
-          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#AAB4C3] hover:text-[#2F80ED] transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to All Publications</span>
-        </Link>
-      </div>
-
-      {/* Article Header */}
-      <header className="max-w-4xl mx-auto px-6 mb-12">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="px-3.5 py-1 rounded-xl text-xs font-mono uppercase bg-[#171D26] text-[#38BDF8] border border-[rgba(255,255,255,0.06)] shadow-[-2px_-2px_5px_rgba(255,255,255,0.02),2px_2px_5px_rgba(0,0,0,0.4)] font-bold">
-            {post.category}
-          </span>
-          <div className="flex items-center gap-4 text-xs font-mono text-[#64748B]">
-            <span className="flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-[#2F80ED]" />
-              {post.date}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-[#38BDF8]" />
-              {post.readTime}
-            </span>
-          </div>
+    <div id="blog-detail-page" className="bg-[#11151C]">
+      {/* Article Header with Background Image & Dark Overlay */}
+      <section className="relative pt-36 pb-16 lg:pt-44 lg:pb-24 overflow-hidden border-b border-[rgba(255,255,255,0.05)] mb-12">
+        {/* Background Image with Black Overlay */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-full object-cover object-center opacity-30 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#11151C]/80 via-[#11151C]/90 to-[#11151C]" />
+          <div className="absolute inset-0 bg-agency-grid opacity-25" />
         </div>
 
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#F4F7FB] font-display leading-[1.1] mb-8">
-          {post.title}
-        </h1>
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
+          {/* Back Link */}
+          <div className="mb-8">
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#AAB4C3] hover:text-[#2F80ED] transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to All Publications</span>
+            </Link>
+          </div>
 
-        {/* Author Bar */}
+          <div className="flex items-center gap-3 mb-4">
+            <span className="px-3.5 py-1 rounded-xl text-xs font-mono uppercase bg-[#171D26] text-[#38BDF8] border border-[rgba(255,255,255,0.06)] shadow-[-2px_-2px_5px_rgba(255,255,255,0.02),2px_2px_5px_rgba(0,0,0,0.4)] font-bold">
+              {post.category}
+            </span>
+            <div className="flex items-center gap-4 text-xs font-mono text-[#64748B]">
+              <span className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-[#2F80ED]" />
+                {post.date}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-[#38BDF8]" />
+                {post.readTime}
+              </span>
+            </div>
+          </div>
+
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#F4F7FB] font-display leading-[1.1]">
+            {post.title}
+          </h1>
+        </div>
+      </section>
+
+      {/* Author Bar */}
+      <div className="max-w-4xl mx-auto px-6 mb-12">
         <div className="flex items-center justify-between py-6 border-y border-[rgba(255,255,255,0.04)]">
           <div className="flex items-center gap-4">
             <img
@@ -86,7 +101,7 @@ export default function BlogDetailPage() {
             </a>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* Featured Banner Image */}
       <div className="max-w-5xl mx-auto px-6 mb-16">
